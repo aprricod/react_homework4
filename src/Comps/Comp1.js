@@ -1,29 +1,25 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-export default class Comp1 extends Component {
-  constructor(props) {
-    super(props);
+function Comp1(props) {
+  const [counter, setCounter] = useState(0);
+  const handlerClick = (event) => {
+    setCounter(counter + 1);
+  };
 
-    this.state = {
-      name: "Первичное состояние",
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState({
-      name: "Была нажата кнопка",
-    });
-  }
-
-  render() {
-    const name = this.state.name;
-    return (
-      <div>
-        <p>{name}</p>
-        <button onClick={this.handleClick}>Поменять состояние</button>
-      </div>
-    );
-  }
+  const handlerMouseEnter = (event) => {
+    console.log("handlerMouseEnter");
+  };
+  const handlerMouseLeave = (event) => {
+    console.log("handlerMouseLeave");
+  };
+  return (
+    <button
+      onClick={handlerClick}
+      onMouseEnter={handlerMouseEnter}
+      onMouseLeave={handlerMouseLeave}
+    >
+      Нажали кнопку {counter} раз
+    </button>
+  );
 }
-
-Comp1.defaultProps = { name: "Ivan" };
+export default Comp1;

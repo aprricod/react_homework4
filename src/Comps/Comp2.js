@@ -5,32 +5,25 @@ export default class Comp2 extends Component {
     super(props);
 
     this.state = {
-      visibility: false,
+      counter: 0,
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState((state) => ({
-      visibility: !state.visibility,
-    }));
+    this.handlerClick = this.handlerClick.bind(this);
   }
 
+  handlerClick() {
+    this.setState({ counter: this.state.counter + 1 });
+  }
   render() {
-    if (this.state.visibility) {
-      return (
-        <div>
-          <p>"Была нажата кнопка"</p>
-          <button onClick={this.handleClick}>Поменять состояние</button>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <button onClick={this.handleClick}>Поменять состояние</button>
-        </div>
-      );
-    }
+    return (
+      <button onClick={this.handlerClick}>
+        Нажали {this.state.counter} раз
+      </button>
+      // ниже тоже рабочий вариант без использованиия this.handlerClick
+      // <button
+      //   onClick={() => this.setState({ counter: this.state.counter + 1 })}
+      // >
+      //   Нажали {this.state.counter} раз
+      // </button>
+    );
   }
 }
-
-Comp2.defaultProps = { name: "Ivan" };
