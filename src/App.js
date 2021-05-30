@@ -3,9 +3,9 @@ import Comp1 from "./Comps/Comp1";
 
 function App() {
   return (
-    <>
+    <div>
       <Comp1 />
-    </>
+    </div>
   );
 }
 
