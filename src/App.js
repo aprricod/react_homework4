@@ -9,28 +9,28 @@ export default class App extends React.Component {
     this.state = {
       scooters: [
         {
-          markder: false,
+          marked: false,
           name: "Xiaomi Mi Electric Scooter Pro 2",
           chargeLevel: 34,
           costPerHour: 1.4,
           img: "https://cdn.alza.sk/ImgW.ashx?fd=f16&cd=MSXI12a4",
         },
         {
-          markder: false,
+          marked: false,
           name: "Xiaomi Mi Electric Scooter 1S EU",
           chargeLevel: 53,
           costPerHour: 6.4,
           img: "https://cdn.alza.sk/ImgW.ashx?fd=f16&cd=MSXI12a2",
         },
         {
-          markder: false,
+          marked: false,
           name: "Street Surfing VOLTAIK MGT 350",
           chargeLevel: 34,
           costPerHour: 1.4,
           img: "https://cdn.alza.sk/ImgW.ashx?fd=f16&cd=SPTepic083",
         },
         {
-          markder: false,
+          marked: false,
           name: "Ninebot eKickscooter ZINGE8",
           chargeLevel: 53,
           costPerHour: 6.4,
