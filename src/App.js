@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Comp1 from "./Comps/Comp1";
 import Comp2 from "./Comps/Comp2";
