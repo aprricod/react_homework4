@@ -26,6 +26,13 @@ export default class TableWorker extends React.PureComponent {
             ))}
           </tbody>
         </table>
+        <div>
+          {this.props.workers.map((worker, index) => (
+            <p key={worker.name + index}>
+              {worker.daySalary * worker.daysCount}
+            </p>
+          ))}
+        </div>
       </React.Fragment>
     );
   }
